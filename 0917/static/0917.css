@@ -1,8 +1,29 @@
 * {
-    font-family: "Stylish", sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 .wrap {
     width: 900px;
     margin: auto;
+}
+
+.form-check-label {
+    width: 170px;
+    margin: 6px;
+}
+
+.form-check-input {
+    position: relative;
+    margin-top: .3rem;
+    margin-left: -1rem;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    margin: 0 5px;
+}
+
+.table td, .table th {
+    padding: .75rem;
+     vertical-align: center;
+    border-top: 1px solid #dee2e6;
 }
