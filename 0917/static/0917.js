@@ -30,7 +30,7 @@ function getCode() {
         g_select_values.push($("input[name='checkType']:checked").val());
     }
 
-    if (g_index == g_base_codes.length) {
+    if (g_index === g_base_codes.length) {
         let data = {};
         g_base_codes.forEach(function (code, idx) {
             data[code] = g_select_values[idx];
@@ -84,7 +84,7 @@ function setLike(company_code){
         url: `/stock/like`,
         data: JSON.stringify({'code':company_code}),
         success: function (response) {
-            alert("수정되었습니다");
+            alert("좋아요");
         }
     })
 }
@@ -95,8 +95,9 @@ function setUnLike(company_code){
         contentType: "application/json; charset=utf-8",
         url: `/stock/unlike`,
         data: JSON.stringify({'code':company_code}),
-        success: function (response) {
-            alert("수정되었습니다")
+        success: function () {
+            alert("별로예요")
+            window.location.reload();
         }
     })
 }
@@ -157,7 +158,8 @@ function makeListStock(stock, index) {
 }
 
 function changePart(part) {
-    if(part == 'rec'){
+    let item
+    if(part === 'rec'){
         item = '#part-rec';
     } else {
         item = '#part-like';

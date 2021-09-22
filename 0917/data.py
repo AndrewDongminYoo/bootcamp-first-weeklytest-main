@@ -3,7 +3,6 @@ from pymongo import MongoClient
 client = MongoClient("mongodb://localhost:27017/")
 
 db = client.dbStock
-
 codes = [
     {"group": "market", "code": "market-1", "name": "코스피"},
     {"group": "market", "code": "market-2", "name": "코스닥"},
@@ -28,6 +27,6 @@ stocks = [
         {"name": "아프리카TV", "code": "067160", "sector": "sector-2", "market": "market-2", "tag": "tag-3", "isLike": False},
         {"name": "자이언트스텝", "code": "289220", "sector": "sector-2", "market": "market-2", "tag": "tag-2", "isLike": False},
         {"name": "키다리스튜디오", "code": "020120", "sector": "sector-2", "market": "market-1", "tag": "tag-2", "isLike": False},
-        {"name": "현대차", "code": "005380", "sector": "sector-3", "market": "market-1", "tag": "tag-4"},
+        {"name": "현대차", "code": "005380", "sector": "sector-3", "market": "market-1", "tag": "tag-4", "isLike": False},
  ]
 db.stocks.insert_many(stocks)
